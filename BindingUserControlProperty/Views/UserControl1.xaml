@@ -10,7 +10,9 @@
     <UserControl.DataContext>
         <viewModels:UserControl1ViewModel/>
     </UserControl.DataContext>
-    <Grid>
-            
-    </Grid>
+    
+	<StackPanel>
+        <TextBox Text="{Binding InputParameter.InputText1}" />
+        <TextBox Text="{Binding InputParameter.InputText2}" />
+    </StackPanel>
 </UserControl>

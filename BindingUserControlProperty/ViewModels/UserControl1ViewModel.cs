@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using BindingUserControlProperty.Models;
 
 namespace BindingUserControlProperty.ViewModels
 {
@@ -34,5 +35,26 @@ namespace BindingUserControlProperty.ViewModels
 		}
 
 		#endregion
+
+		#region InputParameter 変更通知プロパティ
+
+		private InputParameter _inputParameter;
+
+		public InputParameter InputParameter
+		{
+			get { return _inputParameter; }
+			set
+			{
+				SetProperty(ref _inputParameter, value);
+			}
+		}
+
+		#endregion
+
+
+		public UserControl1ViewModel ()
+		{
+			
+		}
 	}
 }
