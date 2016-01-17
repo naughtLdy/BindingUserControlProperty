@@ -50,6 +50,36 @@ namespace BindingUserControlProperty.ViewModels
 
 		#endregion
 
+		#region UserControl1ViewModel 変更通知プロパティ
+
+		private UserControl1ViewModel _userControl1ViewModel;
+
+		public UserControl1ViewModel UserControl1ViewModel
+		{
+			get { return _userControl1ViewModel; }
+			set
+			{
+				SetProperty(ref _userControl1ViewModel, value);
+			}
+		}
+
+		#endregion
+
+		#region UserControl2ViewModel 変更通知プロパティ
+
+		private UserControl2ViewModel _userControl2ViewModel;
+
+		public UserControl2ViewModel UserControl2ViewModel
+		{
+			get { return _userControl2ViewModel; }
+			set
+			{
+				SetProperty(ref _userControl2ViewModel, value);
+			}
+		}
+
+		#endregion
+
 		public MainWindowViewModel()
 		{
 			Title = "MainWindow";

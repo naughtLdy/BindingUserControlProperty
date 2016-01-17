@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BindingUserControlProperty"
         xmlns:viewModels="clr-namespace:BindingUserControlProperty.ViewModels"
+		xmlns:views="clr-namespace:BindingUserControlProperty.Views"
         mc:Ignorable="d"
         Title="{Binding Title}"
 		Height="350"
@@ -15,6 +16,14 @@
     </Window.DataContext>
 	
     <Grid>
-        
+		<Grid.RowDefinitions>
+			<RowDefinition />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		
+		<views:UserControl1 Grid.Row="0"
+							x:Name="UserControl1" />
+        <views:UserControl2 Grid.Row="1"
+							x:Name="UserControl2" />
     </Grid>
 </Window>
