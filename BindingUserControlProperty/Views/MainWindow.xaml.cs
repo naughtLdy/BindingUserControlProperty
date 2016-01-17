@@ -7,11 +7,13 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BindingUserControlProperty.ViewModels;
 
 namespace BindingUserControlProperty
 {
@@ -23,6 +25,9 @@ namespace BindingUserControlProperty
 		public MainWindow()
 		{
 			InitializeComponent();
+
+			((MainWindowViewModel)DataContext).UserControl1ViewModel = (UserControl1ViewModel)UserControl1.DataContext;
+			((MainWindowViewModel)DataContext).UserControl2ViewModel = (UserControl2ViewModel)UserControl2.DataContext;
 		}
 	}
 }
